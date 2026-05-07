@@ -1,0 +1,245 @@
+
+<style>
+  @keyframes flow1 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(30px,20px) scale(1.1)} }
+  @keyframes flow2 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-20px,30px) scale(1.05)} }
+  @keyframes flow3 { 0%,100%{transform:translate(0,0) scale(1)} 60%{transform:translate(15px,-25px) scale(1.08)} }
+  @keyframes heartbeat { 0%,100%{transform:scale(1)} 50%{transform:scale(1.15)} }
+  @keyframes fadein { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  @keyframes shimmer { 0%,100%{opacity:0.7} 50%{opacity:1} }
+
+  .page-wrap {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: #0d0000;
+    font-family: Georgia, serif;
+    padding: 3rem 2rem 4rem;
+    box-sizing: border-box;
+  }
+
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .blob1 { width:480px;height:480px;top:-80px;left:-100px;background:radial-gradient(circle,#8b0000cc,transparent 70%);animation:flow1 12s ease-in-out infinite; }
+  .blob2 { width:400px;height:400px;top:40%;right:-80px;background:radial-gradient(circle,#cc000088,transparent 70%);animation:flow2 15s ease-in-out infinite; }
+  .blob3 { width:350px;height:350px;bottom:-60px;left:20%;background:radial-gradient(circle,#6b0000aa,transparent 70%);animation:flow3 10s ease-in-out infinite; }
+  .blob4 { width:260px;height:260px;top:30%;left:10%;background:radial-gradient(circle,#ff000033,transparent 70%);animation:flow1 18s ease-in-out infinite reverse; }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .title-block {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    animation: fadein 1s ease both;
+  }
+
+  .heart-icon {
+    font-size: 2.8rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    animation: heartbeat 2s ease-in-out infinite;
+  }
+
+  .title-block h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.04em;
+    margin: 0;
+    text-shadow: 0 0 30px #ff000088;
+  }
+
+  .mantra {
+    text-align: center;
+    margin: 0 0 2.5rem;
+    animation: fadein 1.2s ease both;
+  }
+
+  .mantra p {
+    color: #ffbcbc;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin: 0.2rem 0;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .divider {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 1.8rem 0;
+    color: #cc3333;
+    animation: shimmer 4s ease-in-out infinite;
+  }
+
+  .verse {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.85;
+    margin-bottom: 1.4rem;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+    animation: fadein 1.4s ease both;
+  }
+
+  .verse.accent {
+    color: #ff9999;
+    font-size: 1.1rem;
+    border-left: 3px solid #cc0000;
+    padding-left: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  .verse.whisper {
+    color: #ffcccc;
+    font-style: italic;
+    font-size: 0.98rem;
+  }
+
+  .verse.bold-love {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ff6666;
+    letter-spacing: 0.05em;
+  }
+
+  .hearts-row {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 2rem 0;
+    letter-spacing: 0.3rem;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .closing {
+    text-align: center;
+    margin-top: 2.5rem;
+    animation: fadein 2s ease both;
+  }
+
+  .closing .big-heart {
+    font-size: 3.5rem;
+    display: block;
+    animation: heartbeat 1.8s ease-in-out infinite;
+  }
+
+  .closing p {
+    color: #ffaaaa;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-top: 0.8rem;
+  }
+
+  .rose {
+    display: inline-block;
+    animation: float 4s ease-in-out infinite;
+  }
+</style>
+
+<div class="page-wrap">
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+  <div class="blob blob4"></div>
+
+  <div class="content">
+
+    <div class="title-block">
+      <span class="heart-icon">❤️</span>
+      <h1>A Letter to the Soul Behind My Smile</h1>
+    </div>
+
+    <div class="mantra">
+      <p>✨ I am okay ✨</p>
+      <p>✨ I am okay ✨</p>
+      <p>✨ I am okay ✨</p>
+    </div>
+
+    <div class="divider">🌹 ～ 🖤 ～ 🌹</div>
+
+    <p class="verse">
+      There are seasons when the darkness seeps in through the cracks —<br>
+      when the weight of unseen things pulls you under<br>
+      before you even realize you're drowning. 🌑
+    </p>
+
+    <p class="verse accent">
+      But hear this, tender soul:<br>
+      you are sheltered. You are fed. You are clothed and washed clean.<br>
+      You are held — maybe even fiercely loved. 🏠🕊️
+    </p>
+
+    <p class="verse whisper">
+      And still, the mind wanders to the shadows<br>
+      instead of turning toward the light that floods your days...
+    </p>
+
+    <div class="divider">💀 ～ ❤️ ～ 💀</div>
+
+    <p class="verse">
+      Awaken, love. Rise before those shadows<br>
+      devour the very things that make your chest rise and fall<br>
+      with something worth waking up for. 🔥
+    </p>
+
+    <p class="verse accent">
+      When you are near her — do you feel it?<br>
+      That rush, that bliss, that sacred flutter<br>
+      that no word in any language has ever earned the right to name? 💫
+    </p>
+
+    <p class="verse">
+      You are not wicked. You are not broken. 🖤<br>
+      You are simply someone who has let wolves<br>
+      sleep too close to the heart.
+    </p>
+
+    <div class="divider">🌹 ～ 💔 ～ 🌹</div>
+
+    <p class="verse bold-love">
+      You love her. 💗<br>
+      Even if the words still live trapped behind your teeth —<br>
+      you love her.
+    </p>
+
+    <p class="verse whisper">
+      You go weak at the knees<br>
+      at the simple miracle of her smile. 😍<br>
+      Even in the moments you'd rather be anywhere else —<br>
+      your heartbeat quickens like it knows something you're still learning.
+    </p>
+
+    <p class="verse accent">
+      You would move mountains for her. 🏔️<br>
+      Rearrange the stars. Surrender things<br>
+      you didn't even know you held sacred —<br>
+      and she doesn't yet know the full depth of that devotion.
+    </p>
+
+    <p class="verse">
+      She is the ground you would worship. 🌺<br>
+      She is beautiful, yes — but more than that,<br>
+      she is kind. She is <em>good</em>. She is the rare kind of soul<br>
+      the universe does not make twice. ✨
+    </p>
+
+    <div class="hearts-row">🖤 ❤️ 🖤 ❤️ 🖤 ❤️ 🖤</div>
+
+    <div class="closing">
+      <span class="big-heart">❤️</span>
+      <p><span class="rose">🌹</span> &nbsp; hold on to what blooms &nbsp; <span class="rose">🌹</span></p>
+    </div>
+
+  </div>
+</div>
